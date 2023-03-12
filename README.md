@@ -14,3 +14,4 @@ Enter the start position and goal position coordinate values as integers
 
 Output - The final output is the video generated and saved on the system and it prints the total run time
 
+![My output](sample_output.png)
