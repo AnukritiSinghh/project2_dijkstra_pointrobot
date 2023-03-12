@@ -3,7 +3,7 @@ import time
 import copy
 import cv2
 # uncomment below line if running in colab
-from google.colab.patches import cv2_imshow
+# from google.colab.patches import cv2_imshow
 import heapq as hq
 import numpy as np
 
@@ -51,7 +51,7 @@ def coord_input(canvas):
           # to check if the coordinate value entered is greater than the canvas dimensions
             print("Y Coordinate is out of bounds")
             continue        
-        if(canvas[canvas.shape[0]-1-y][x][0]==255 or 0<=x<5 and 0<=y<5):
+        if(canvas[canvas.shape[0]-1-y][x][0]==255 or 0<=x<5 or 0<=y<5):
           # to check if the entered coordinates of x and y lie inside the obstacle space
             print("The entered start position is in the obstacle space, enter again")
             continue      
@@ -82,7 +82,7 @@ def coord_input(canvas):
             # to check if the coordinate value entered is greater than the canvas dimensions
             print("Y Coordinate is out of bounds")
             continue    
-        if(canvas[canvas.shape[0]-1-y][x][0]==255 or 0<=x<5 and 0<=y<5):
+        if(canvas[canvas.shape[0]-1-y][x][0]==255 or 0<=x<5 or 0<=y<5):
           # to check if the entered coordinates of x and y lie inside the obstacle space
             print("The entered goal node is in the obstacle space, enter again")
             continue
@@ -143,7 +143,7 @@ def back_track(start_position, goal_position, final_list, canvas):
     for k in final_list:
         canvas[k[1], k[0]] = [255] * 3
         # cv2.imshow(canvas)
-        cv2_imshow(canvas)
+        # cv2_imshow(canvas)
         cv2.waitKey(1)
         output_video.write(canvas) 
     # Backtrack the path from goal to start.
@@ -159,7 +159,7 @@ def back_track(start_position, goal_position, final_list, canvas):
         canvas[path_node[1], path_node[0]] = [19, 209, 158]
         output_video.write(canvas)
     # cv2.imshow(canvas)
-    cv2_imshow(canvas)
+    # cv2_imshow(canvas)
     output_video.release()
 
 def dijkstra_algo(start_position, goal_position, canvas):
