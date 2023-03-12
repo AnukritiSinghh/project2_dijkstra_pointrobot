@@ -16,7 +16,11 @@ Output - The final output is the video generated and saved on the system and it 
 
 Test case 1 - (5,5) and (550,240)
 
+Total time - 2 min
+
 
 Test case 2 - (400,200) and (300,40)
+
+Total time - 1 min 17s
 
 ![My output](case2_output.png)
