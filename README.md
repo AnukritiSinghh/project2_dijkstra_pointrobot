@@ -23,4 +23,4 @@ Test case 2 - (400,200) and (300,40)
 
 Total time - 1 min 17s
 
-![My output](case2_output.png)
+![My image](case2_output.png)
