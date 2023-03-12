@@ -9,6 +9,19 @@ import numpy as np
 
 
 
+# function to draw the obstacles on a canvas map 
+def obstacles_map(canvas):
+    # rectangle 1 obstacle with the given dimensions, the thickness of 5mm is considered inwards
+    cv2.fillPoly(canvas, pts = [np.array([(100,150), (150,150), (150,250), (100,250)])], color = (255, 0, 0))
+    # rectangle 2 obstacle with the given dimensions, the thickness of 5mm is considered inwards
+    cv2.fillPoly(canvas, pts = [np.array([(100,0), (150,0), (150,100), (100,100)])], color = (255, 0, 0))
+    # heaxgon obstacle with the given dimensions, the thickness of 5mm is considered inwards
+    cv2.fillPoly(canvas, pts = [np.array([(235,87),(300,50),(365,87),(365,162),(300,200),(235,162)])], color = (255, 0, 0))
+    # traingle obstacle with the given dimensions, the thickness of 5mm is considered inwards
+    cv2.fillPoly(canvas, pts = [np.array([(460,225), (510,125), (460,25)])], color = (255, 0, 0))
+    return canvas
+
+
 # the function to take start and goal node coordinates and to check if the nodes are invalid
 def coord_input(canvas):
   # initialize empty lists
