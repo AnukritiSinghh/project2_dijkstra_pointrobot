@@ -156,7 +156,7 @@ def back_track(start_position, goal_position, final_list, canvas):
     # Draw the path from start to goal.
     while backtrack_stack:
         path_node = backtrack_stack.pop()
-        canvas[path_node[1], path_node[0]] = [19, 209, 158]
+        canvas[path_node[1], path_node[0]] = [170, 51, 106]
         output_video.write(canvas)
     # cv2.imshow(canvas)
     # cv2_imshow(canvas)
